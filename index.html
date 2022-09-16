@@ -4,13 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;0,800;0,900;1,600&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.min.css">
-    <title>Document</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <title>Crypto wallet</title>
 </head>
+<style>
+    .modal{display: none;}
+</style>
+
+<!-- 
+    1. Форми
+    2. Модальне вікно
+    3. Повідомлення подяки
+    4. Sidebar : Account block
+ -->
 
 <body>
     <div class="net">
@@ -31,41 +42,167 @@
         </div>
     </div>
 
+    
+    <aside class="sidebar js-sidebar"> 
+        <div class="sidebar-trigger js-sidebar-trigger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        
+
+        <div class="sidebar-content">
+
+        <div class="account">
+            <div class="account-content"> <!-- If customer unauthorized  nedd add class "unauthorized" -->
+
+                <!-- Unauthorized customer -->
+
+                <!-- <div class="account__logo">
+                    <span class="icon icon-user account-icon"></span>
+                </div>
+
+                <div class="account-info">
+                
+                    <div class="account-actions">
+                        <a data-fancybox href="#modal-login" class="btn btn-primary account-actions__item">
+                            Login
+                        </a>
+                        <a data-fancybox href="#modal-register" class="btn btn-primary account-actions__item">
+                            Sign Up
+                        </a>
+                    </div>
+                </div>     -->
+
+                <!-- Authorized customer -->
+
+                <div class="account__image-wrapper">
+                    <img class="account__image" src="images/avatar.jpg" alt="User name" >
+                </div>
+
+                <div class="account-info">
+                    <div class="account__title">
+                        John Malkovich
+                    </div>
+
+                    <div class="account-actions">
+                        <a class="btn btn-primary account-actions__item" href="#">
+                            Log Out
+                        </a>
+                    </div>
+                </div>                      
+
+            </div>
+        </div>
+
+            
+            <div class="sidebar-nav">
+                <ul>
+                    <li class="sidebar-nav-item">
+                        <span class="icon icon-coin-dollar sidebar-nav__icon"></span>
+                        <a class="sidebar-nav__link js-sidebar-link" href="">
+                            My wallet
+                        </a>
+                    </li>
+                    <li class="sidebar-nav-item">
+                        <span class="icon icon-cart sidebar-nav__icon"></span>
+                        <a class="sidebar-nav__link js-sidebar-link" href="">
+                            Overview
+                        </a>
+                    </li>
+                    <li class="sidebar-nav-item">
+                        <span class="icon icon-loop sidebar-nav__icon"></span>
+                        <a class="sidebar-nav__link js-sidebar-link" href="">
+                            Excahnge
+                        </a>
+                    </li>
+                    <li class="sidebar-nav-item">
+                        <span class="icon icon-database sidebar-nav__icon"></span>
+                        <a class="sidebar-nav__link js-sidebar-link" href="">
+                            Backup
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="sidebar-nav sidebar-addition">
+                <ul>
+                    <li class="sidebar-nav-item">
+                        <span class="icon icon-cogs sidebar-nav__icon"></span>
+
+                        <a class="sidebar-nav__link" href="#">
+                            Settings
+                        </a>
+                    </li>
+
+                    <li class="sidebar-nav-item">
+                        <span class="icon icon-info sidebar-nav__icon"></span>
+
+                        <a class="sidebar-nav__link" href="#">
+                            Help
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        
+    </aside>
+
     <div class="wrapper">
         <header class="header">
     
             <div class="logo">
-                <img src="images/4.jpg" alt="Perfecto" class="logo__img">
-                <div class="logo__title">Perfecto!</div>
+                <img src="images/logo.png" alt="Perfecto" class="logo__img">
+                <div class="logo__title">
+                    crypto 
+                    <span>wallet</span>
+                </div>
             </div>
     
             <div class="account js-action-content">
+
+                <!-- Authorized customer -->
                 <div class="account-content">
                     <div class="account__title">
-                        Username
+                        John Malkovich
                     </div>
                     <div class="account__logo">
-                        <img src="images/4.jpg" alt="account__title">
+                        <img src="images/avatar.jpg" alt="user name">
                     </div>
                 </div>
                 
                 <div class="account-actions">
-                    <a class="account-actions__item" href="#">
-                        Log In
-                    </a>
-                    <a class="account-actions__item" href="#">
+                    <a class="btn btn-default account-actions__item" href="#">
                         Log Out
                     </a>
                 </div>
+
+                <!-- Unauthorized customer -->
+                <!-- <div class="account-content">
+                    <div class="account__logo">
+                        <span class="icon icon-user account-icon"></span>
+                    </div>
+                </div>
+                
+                <div class="account-actions">
+                    <a data-fancybox class="btn btn-default account-actions__item" href="#modal-login">
+                        Log In
+                    </a>
+                    <a data-fancybox class="btn btn-default account-actions__item" href="#modal-register">
+                        Sign Up
+                    </a>
+                </div> -->
+
             </div>
 
             <div class="account account-mobile">
                 <div class="account-content">
                     <div class="account__title">
-                        Username
+                        John Malkovich
                     </div>
                     <div class="account__logo">
-                        <img src="images/4.jpg" alt="account__title">
+                        <img src="images/avatar.jpg" alt="User name">
                     </div>
                 </div>
             </div>
@@ -78,73 +215,6 @@
         </header>    
         
         <div class="main-wrapper">
-    
-            <aside class="sidebar js-sidebar"> 
-                <div class="sidebar-trigger js-sidebar-trigger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <div class="sidebar-content">
-                    <div class="sidebar__img-wrapper">
-                        <img src="images/4.jpg" alt="User logo" class="sidebar__img">
-                    </div>
-        
-                    <div class="sidebar-nav">
-                        <ul>
-                            <li class="sidebar-nav-item">
-                                <span class="icon icon-coin-dollar sidebar-nav__icon"></span>
-                                <a class="btn sidebar-nav__link js-sidebar-link" href="">
-                                    My wallet
-                                </a>
-                            </li>
-                            <li class="sidebar-nav-item">
-                                <div class="sidebar-nav__icon"></div>
-                                <a class="btn sidebar-nav__link js-sidebar-link" href="">
-                                    Overview
-                                </a>
-                            </li>
-                            <li class="sidebar-nav-item">
-                                <span class="icon icon-loop sidebar-nav__icon"></span>
-                                <a class="btn sidebar-nav__link js-sidebar-link" href="">
-                                    Excahnge
-                                </a>
-                            </li>
-                            <li class="sidebar-nav-item">
-                                <span class="icon icon-database sidebar-nav__icon"></span>
-                                <a class="btn sidebar-nav__link js-sidebar-link" href="">
-                                    Backup
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-        
-                    <div class="sidebar-nav sidebar-addition">
-                        <ul>
-                            <li class="sidebar-nav-item">
-                                <a class="sidebar-nav__link" href="#">
-                                    <span class="icon icon-cogs sidebar-nav__icon"></span>
-                                    <div class="sidebar-nav__title">
-                                        Settings
-                                    </div>                                    
-                                </a>
-                            </li>
-                            <li class="sidebar-nav-item">
-                                <a class="sidebar-nav__link" href="">
-                                    <span class="icon icon-info sidebar-nav__icon"></span>
-                                    <div class="sidebar-nav__title">
-                                        Help
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-    
-              
-            </aside>
-
-    
             <main class="main js-main">
     
                 <div class="container">
@@ -156,7 +226,7 @@
                                     <div class="block-head">
                                         <div class="block-title">
                                             <div class="name">
-                                                Title
+                                                Total
                                             </div>
                                         </div>
                                         <button class="btn-details js-block-trigger active">
@@ -167,7 +237,6 @@
                                     </div>
                                     <div class="block-content">
                                         <div class="chart-wrapper">
-                                            <h2>Total</h2>
                                             <div class="chart-price">
                                                 <div class="chart-price__currency">$</div>
                                                 <div class="chart-price__value">4567890</div>
@@ -206,10 +275,10 @@
                                     <div class="block-content">
                                         <div class="list-wrapper">
                                             <div class="list">
-                                                <div class="list-item tab-title js-tab-title" data-id="1">
+                                                <div class="list-item tab-title js-tab-title active" data-id="1">
                                                     <div class="list-item-head">
                                                         <div class="list-item__img">
-                                                            <img src="" alt="">
+                                                            <img src="images/4.jpg" alt="Currency title">
                                                         </div>
                                                         <div class="list-item__title">
                                                             Bitcoin
@@ -233,7 +302,7 @@
                                                 <div class="list-item tab-title js-tab-title" data-id="2">
                                                     <div class="list-item-head">
                                                         <div class="list-item__img">
-                                                            <img src="" alt="">
+                                                            <img src="images/4.jpg" alt="Currency title">
                                                         </div>
                                                         <div class="list-item__title">
                                                             Bitcoin
@@ -257,7 +326,7 @@
                                                 <div class="list-item tab-title js-tab-title" data-id="3">
                                                     <div class="list-item-head">
                                                         <div class="list-item__img">
-                                                            <img src="" alt="">
+                                                            <img src="images/4.jpg" alt="Currency title">
                                                         </div>
                                                         <div class="list-item__title">
                                                             Bitcoin
@@ -281,7 +350,7 @@
                                                 <div class="list-item tab-title js-tab-title" data-id="4">
                                                     <div class="list-item-head">
                                                         <div class="list-item__img">
-                                                            <img src="" alt="">
+                                                            <img src="images/4.jpg" alt="Currency title">
                                                         </div>
                                                         <div class="list-item__title">
                                                             Bitcoin
@@ -305,7 +374,7 @@
                                                 <div class="list-item tab-title js-tab-title" data-id="5">
                                                     <div class="list-item-head">
                                                         <div class="list-item__img">
-                                                            <img src="" alt="">
+                                                            <img src="images/4.jpg" alt="Currency title">
                                                         </div>
                                                         <div class="list-item__title">
                                                             Bitcoin
@@ -413,15 +482,72 @@
                                             <div class="table">
                                                 
                                                 <div class="table-item">
-                                                    <div class="table-item__icon table-item__icon-up">
-                                                        <span class="icon icon-circle-up"></span>
-                                                    </div>
-                
+                                                  
                                                     <div class="table-item-head">
 
-                                                        <div class="table-item__logo">
-                                                            <img src="images/4.jpg" alt="Item">
+                                                        <div class="table-item__icon table-item__icon-up">
+                                                            <span class="icon icon-circle-up"></span>
                                                         </div>
+
+                                                
+                                                        <div class="table-item-currency">
+                                                            <div class="table-item__logo">
+                                                                <img src="images/4.jpg" alt="Item">
+                                                            </div>
+                                                            <div class="table-item__title">
+                                                                Bitcoin
+                                                            </div>
+                                                        </div>
+                                                       
+                
+                                                    </div>
+
+                                                    <div class="table-item-body">
+
+                                                        <div class="table-main">
+                                                            <div class="table-main-top table-item__part row-reverse">
+                                                                <div class="value">900</div>
+                                                                <div class="currency">$</div>
+                                                            </div>
+                                                            <div class="table-main-bottom table-item__part">
+                                                                <div class="value">0.0000000123</div>
+                                                                <div class="currency">BTC</div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="table-info">
+                                                            <div class="destination">to:</div>
+                                                            <div class="person">Eddie Merphie</div>
+                                                        </div>
+                                                       
+                                                    </div>
+
+                                                    <div class="table-item-footer">
+                                                        <div class="table-date">
+                                                            <div class="date">21/03/2022</div>
+                                                            <div class="time">1.53 AM</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="table-item__img"></div>
+                                                </div>
+                                                <div class="table-item">
+                                                  
+                                                    <div class="table-item-head">
+
+                                                        <div class="table-item__icon table-item__icon-up">
+                                                            <span class="icon icon-circle-up"></span>
+                                                        </div>
+
+                                                
+                                                        <div class="table-item-currency">
+                                                            <div class="table-item__logo">
+                                                                <img src="images/4.jpg" alt="Item">
+                                                            </div>
+                                                            <div class="table-item__title">
+                                                                Bitcoin
+                                                            </div>
+                                                        </div>
+                                                       
                 
                                                     </div>
 
@@ -455,59 +581,46 @@
                                                 </div>
 
                                                 <div class="table-item">
-                                                    <div class="table-item__icon table-item__icon-down">
-                                                        <span class="icon icon-circle-down"></span>
-                                                    </div>
-                
+                                                  
                                                     <div class="table-item-head">
-                                                        <div class="table-item__logo">
-                                                            <img src="images/4.jpg" alt="Item">
+
+                                                        <div class="table-item__icon table-item__icon-down">
+                                                            <span class="icon icon-circle-down"></span>
                                                         </div>
-                
-                                                        <div class="table-item__part row-reverse">
-                                                            <div class="value">900</div>
-                                                            <div class="currency">$</div>
+
+                                                
+                                                        <div class="table-item-currency">
+                                                            <div class="table-item__logo">
+                                                                <img src="images/4.jpg" alt="Item">
+                                                            </div>
+                                                            <div class="table-item__title">
+                                                                Bitcoin
+                                                            </div>
                                                         </div>
-                                                        <div class="table-item__part">
-                                                            <div class="value">0.0000000123</div>
-                                                            <div class="currency">BTC</div>
-                                                        </div>
+                                                       
                 
                                                     </div>
+
                                                     <div class="table-item-body">
-                                                        <div class="destination">to:</div>
-                                                        <div class="person">Eddie Merphie</div>
-                                                    </div>
-                                                    <div class="table-item-footer">
-                                                        <div class="table-date">
-                                                            <div class="date">21/03/2022</div>
-                                                            <div class="time">1.53 AM</div>
+
+                                                        <div class="table-main">
+                                                            <div class="table-main-top table-item__part row-reverse">
+                                                                <div class="value">900</div>
+                                                                <div class="currency">$</div>
+                                                            </div>
+                                                            <div class="table-main-bottom table-item__part">
+                                                                <div class="value">0.0000000123</div>
+                                                                <div class="currency">BTC</div>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="table-item__img"></div>
-                                                </div>
-                                                <div class="table-item">
-                                                    <div class="table-item__icon">^</div>
-                
-                                                    <div class="table-item-head">
-                                                        <div class="table-item__logo">
-                                                            <img src="images/4.jpg" alt="Item">
+
+                                                        <div class="table-info">
+                                                            <div class="destination">to:</div>
+                                                            <div class="person">Eddie Merphie</div>
                                                         </div>
-                
-                                                        <div class="table-item__part row-reverse">
-                                                            <div class="value">900</div>
-                                                            <div class="currency">$</div>
-                                                        </div>
-                                                        <div class="table-item__part">
-                                                            <div class="value">0.0000000123</div>
-                                                            <div class="currency">BTC</div>
-                                                        </div>
-                
+                                                       
                                                     </div>
-                                                    <div class="table-item-body">
-                                                        <div class="destination">to:</div>
-                                                        <div class="person">Eddie Merphie</div>
-                                                    </div>
+
                                                     <div class="table-item-footer">
                                                         <div class="table-date">
                                                             <div class="date">21/03/2022</div>
@@ -537,7 +650,6 @@
             </main>
         </div>
        
-    
         <footer class="footer">
             <div class="container">
                 <div class="footer-content">
@@ -557,58 +669,92 @@
                 
         </footer>
     </div>
-  
-    <!-- <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
-    </script>
-    <script>
-        const ctx = document.getElementById('myChart');
 
-        const myChart = new Chart(ctx, {
-            type: 'doughnut',
+    <div id="modal-login" class="modal">
+        <div class="modal-content">
+            <div class="form-wrapper">
+                <form action="" class="form">
 
-            data: {
-                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-                datasets: [{
-                    label: '# of Votes',
-                    data: [12, 19, 3, 5, 2, 3],
-                    backgroundColor: [
-                        'rgba(255, 99, 132, 0.2)',
-                        'rgba(54, 162, 235, 0.2)',
-                        'rgba(255, 206, 86, 0.2)',
-                        'rgba(75, 192, 192, 0.2)',
-                        'rgba(153, 102, 255, 0.2)',
-                        'rgba(255, 159, 64, 0.2)'
-                    ],
-                    borderColor: [
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(54, 162, 235, 1)',
-                        'rgba(255, 206, 86, 1)',
-                        'rgba(75, 192, 192, 1)',
-                        'rgba(153, 102, 255, 1)',
-                        'rgba(255, 159, 64, 1)'
-                    ],
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                responsive: true,
-                legend: {
-                    position: 'bottom',
-                },
-                title: {
-                    display: true,
-                    text: 'Chart.js Doughnut Chart'
-                },
-                scales: {
-                    y: {
-                        beginAtZero: true
-                    }
-                }
-            }
-        });
-         -->
-        </script>
+                    <div class="form__title">
+                        Login
+                    </div>
+
+
+                    <ul class="social">
+                        <li class="social-item">
+                            <a href="#" class="social-item__link">Google</a>
+                        </li>
+                        <li class="social-item">
+                            <a href="#" class="social-item__link">Facebook</a>
+                        </li>
+                        <li class="social-item">
+                            <a href="#" class="social-item__link">LinkedIn</a>
+                        </li>
+                        <li class="social-item">
+                            <a href="#" class="social-item__link">Gmail</a>
+                        </li>
+                        
+                    </ul>
+
+                    <div class="form-choice"><span></span></div>
+
+                    <div class="form-content">
+                        <div class="input-wrapper">
+                            <input class="input" type="text" id="login-nickname"  placeholder="Enter your nickname" required>
+                        </div>
+                        <div class="input-wrapper">
+                            <input type="password" class="input" id="login-password" name="login-password" placeholder="Enter your password" required>
+                        </div>
+                        <div class="imput-wrapper input-wrapper-submit">
+                            <input class="btn btn-primary" type="submit" value="Login">
+                        </div>
+                    </div>
+
+                    <a class="form__link" href="#">Forgot your account password?</a>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-register" class="modal">
+        <div class="modal-content">
+            <div class="form-wrapper">
+                <form action="" class="form">
+                    <div class="input-wrapper">
+                        <input type="text" class="input" id="register-name" name="register-name" placeholder="Enter your fullname">
+                    </div>
+                    <div class="input-wrapper">
+                        <input class="input" type="email" id="register-email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="input-wrapper">
+                        <input class="input" type="password" id="register-password" placeholder="Enter your password" required>
+                    </div>
+                    <div class="input-wrapper">
+                        <input type="password" class="input" id="register-password-repeat" name="register-password-repeat" placeholder="Repeat your password" required>
+                    </div>
+                    <div class="input-wrapper">
+                        <input class="btn btn-primary" type="submit" value="Submit">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-recover-password" class="modal">
+        <div class="modal-content">
+            <div class="form-wrapper">
+                <form action="" class="form">
+                    <div class="input-wrapper">
+                        <input type="email" class="input" id="recover-pass-email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="input-wrapper input-wrapper-submit">
+                        <input class="btn btn-primary" type="submit" value="Submit">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 
     <script src="js/main.min.js"></script>
 </body>
