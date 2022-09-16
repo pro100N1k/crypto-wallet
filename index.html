@@ -16,13 +16,6 @@
     .modal{display: none;}
 </style>
 
-<!-- 
-    1. Форми
-    2. Модальне вікно
-    3. Повідомлення подяки
-    4. Sidebar : Account block
- -->
-
 <body>
     <div class="net">
         <div class="net-item">
@@ -54,11 +47,10 @@
         <div class="sidebar-content">
 
         <div class="account">
-            <div class="account-content"> <!-- If customer unauthorized  nedd add class "unauthorized" -->
+            <div class="account-content unauthorized"> <!-- If customer unauthorized  nedd add class "unauthorized" -->
 
                 <!-- Unauthorized customer -->
-
-                <!-- <div class="account__logo">
+                <div class="account__logo">
                     <span class="icon icon-user account-icon"></span>
                 </div>
 
@@ -72,11 +64,11 @@
                             Sign Up
                         </a>
                     </div>
-                </div>     -->
+                </div>    
 
                 <!-- Authorized customer -->
 
-                <div class="account__image-wrapper">
+                <!-- <div class="account__image-wrapper">
                     <img class="account__image" src="images/avatar.jpg" alt="User name" >
                 </div>
 
@@ -90,7 +82,7 @@
                             Log Out
                         </a>
                     </div>
-                </div>                      
+                </div>                       -->
 
             </div>
         </div>
@@ -160,7 +152,7 @@
                 </div>
             </div>
     
-            <div class="account js-action-content">
+            <div class="account js-action-content mobile-dropdown">
 
                 <!-- Authorized customer -->
                 <div class="account-content">
@@ -637,11 +629,6 @@
                                 </div>
                             </div>
 
-                            <div class="block-wrapper">
-                                <div class="block">
-                                    1
-                                </div>
-                            </div>
                         </div>
                     </div>
         
@@ -721,21 +708,27 @@
         <div class="modal-content">
             <div class="form-wrapper">
                 <form action="" class="form">
-                    <div class="input-wrapper">
-                        <input type="text" class="input" id="register-name" name="register-name" placeholder="Enter your fullname">
+                    <div class="form__title">
+                        Sign Up
                     </div>
-                    <div class="input-wrapper">
-                        <input class="input" type="email" id="register-email" placeholder="Enter your email" required>
-                    </div>
-                    <div class="input-wrapper">
-                        <input class="input" type="password" id="register-password" placeholder="Enter your password" required>
-                    </div>
-                    <div class="input-wrapper">
-                        <input type="password" class="input" id="register-password-repeat" name="register-password-repeat" placeholder="Repeat your password" required>
-                    </div>
-                    <div class="input-wrapper">
-                        <input class="btn btn-primary" type="submit" value="Submit">
-                    </div>
+                    <div class="form-content">
+                        <div class="input-wrapper">
+                            <input type="text" class="input" id="register-name" name="register-name" placeholder="Enter your fullname">
+                        </div>
+                        <div class="input-wrapper">
+                            <input class="input" type="email" id="register-email" placeholder="Enter your email" required>
+                        </div>
+                        <div class="input-wrapper input-wrapper-half">
+                            <input class="input" type="password" id="register-password" placeholder="Enter your password" required>
+                        </div>
+                        <div class="input-wrapper input-wrapper-half">
+                            <input type="password" class="input" id="register-password-repeat" name="register-password-repeat" placeholder="Repeat your password" required>
+                        </div>
+                        <div class="input-wrapper input-wrapper-submit">
+                            <input class="btn btn-primary" type="submit" value="Submit">
+                        </div>
+                    </div>       
+                    <a class="form__link" href="#">You already have account?</a>             
                 </form>
             </div>
         </div>
