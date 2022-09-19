@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;0,800;0,900;1,600&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <title>Crypto wallet</title>
 </head>
@@ -393,6 +394,18 @@
                                     </div>
                                 </div>
                             </div>
+
+                            <div class="block-wrapper">
+                                <div class="block-content">
+                                    <div class="link-block">
+                                        <h2 class="link-block-title">
+                                            <a href="#modal-create-wallet" class="btn btn-primary link-block__link fancybox">
+                                                Create new wallet
+                                            </a>
+                                        </h2>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
     
                         <div class="column">
@@ -711,7 +724,7 @@
                     <div class="form__title">
                         Sign Up
                     </div>
-                    <div class="form-content">
+                    <div class="form-content form-content-flex">
                         <div class="input-wrapper">
                             <input type="text" class="input" id="register-name" name="register-name" placeholder="Enter your fullname">
                         </div>
@@ -749,6 +762,53 @@
         </div>
     </div>
 
+    <div id="modal-create-wallet" class="modal ">
+        <div class="modal-content modal-content_wide">
+            <form action="" class="form">
+                <div class="form__title">
+                    New wallet
+                </div>
+                <div class="form-content form-content-parts">
+
+                    <div class="form-content-inner">
+                        <div class="input-wrapper input-wrapper-select">
+                            <label for="seect">Choose your destiny:</label>
+                            <select id="select" class="js-example-basic-single" name="state" style="width: 100%;">
+                                <option value="BTC">Bitcoin</option>
+                                <option value="ETH">Ethereum</option>
+                                <option value="TTH">Tether</option>
+                                <option value="BNB">BNB</option>
+                                <option value="SOL">Solana</option>
+                              </select>
+                        </div>
+    
+                        <div class="input-wrapper">
+                            <input class="input"  type="password" placeholder="Enter password" required>
+                        </div>
+
+                        <div class="input-wrapper">
+                            <input type="text" class="input" placeholder="Enter wallet title">
+                        </div>
+                    </div>
+
+                    <div class="input-wrapper input-wrapper-textarea">
+                        <label for="message">Type all you want</label>
+                        <textarea name="message" id="message" placeholder="Enter keys"></textarea>
+                    </div>
+                        
+                </div>
+                
+                
+               
+                <div class="form-actions">
+                    <button class="btn btn-primary form-actions__item" type="submit">Create</button>
+                    <button class="btn btn-primary form-actions__item js-modal-close" >Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
     <script src="js/main.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
 </body>
 </html>
